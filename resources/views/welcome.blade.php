@@ -1,67 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+@extends('layouts.app')
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    
-    <title>CourseCast</title>
-    
-    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}" />
+@section('title')
+    CourseCast
+@endsection
 
-    <link rel="stylesheet" href="{{asset('frontend/style/main1.css')}}" />
-    
-    
-  </head>
-  <body>
+@section('content')
 
-    <!--  -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <h2 class="brand-name">
-            <span class="text-purple">C</span>ourse<span class="text-purple"
-              >C</span
-            >ast
-          </h2>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
-                >Program</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Mentor</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Business</a>
-            </li>
-          </ul>
-          <div class="d-flex">
-            <a href="#" class="btn btn-master btn-secondary me-3"> Sign In </a>
-            <a href="#" class="btn btn-master btn-primary"> Sign Up </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    
     <!--  -->
     <section class="banner">
       <div class="container">
@@ -283,7 +227,7 @@
                     <div class="clear"></div>
                   </div>
                   <p>
-                    <a href="#" class="btn btn-master btn-primary w-100 mt-3">
+                    <a href="{{route('checkout')}}" class="btn btn-master btn-primary w-100 mt-3">
                       Take This Plan
                     </a>
                   </p>
@@ -317,7 +261,7 @@
                     <div class="clear"></div>
                   </div>
                   <p>
-                    <a href="#" class="btn btn-master btn-secondary w-100 mt-3">
+                    <a href="{{route('checkout')}}" class="btn btn-master btn-secondary w-100 mt-3">
                       Start With This Plan
                     </a>
                   </p>
@@ -403,9 +347,5 @@
         </div>
       </div>
     </section>
-
-    <!--  -->
-    <!--  -->
-    <script src="frontend/js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
+    
+@endsection
