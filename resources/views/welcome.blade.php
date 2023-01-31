@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    CourseCast
+    CourseCasts
 @endsection
 
 @section('content')
