@@ -177,7 +177,7 @@
             <div class="row">
               <div class="col-lg-6 col-12">
                 <div class="table-pricing paket-gila">
-                  <p class="story text-center">GILA BELAJAR</p>
+                  <p class="story text-center">PAKET HYPE</p>
                   <h1 class="price text-center">$280K</h1>
                   <div class="item-benefit-pricing mb-4">
                     <img src="{{asset('assets/ic_check.svg')}}" alt="" />
@@ -227,7 +227,7 @@
                     <div class="clear"></div>
                   </div>
                   <p>
-                    <a href="{{route('checkout')}}" class="btn btn-master btn-primary w-100 mt-3">
+                    <a href="{{route('checkout.create', 'paket-hype')}}" class="btn btn-master btn-primary w-100 mt-3">
                       Take This Plan
                     </a>
                   </p>
@@ -235,7 +235,7 @@
               </div>
               <div class="col-lg-6 col-12">
                 <div class="table-pricing paket-biasa">
-                  <p class="story text-center">BARU MULAI</p>
+                  <p class="story text-center">PAKET BAYI</p>
                   <h1 class="price text-center">$140K</h1>
                   <div class="item-benefit-pricing mb-4">
                     <img src="{{asset('assets/ic_check.svg')}}" alt="" />
@@ -261,7 +261,7 @@
                     <div class="clear"></div>
                   </div>
                   <p>
-                    <a href="{{route('checkout')}}" class="btn btn-master btn-secondary w-100 mt-3">
+                    <a href="{{route('checkout.create', 'paket-bayi')}}" class="btn btn-master btn-secondary w-100 mt-3">
                       Start With This Plan
                     </a>
                   </p>

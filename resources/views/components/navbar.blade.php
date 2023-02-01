@@ -46,7 +46,7 @@
                     <a href="#" class="dropdown-item">Profile</a>
                   </li>
                   <li>
-                    <a href="#" class="dropdown-item">Dashboard</a>
+                    <a href="{{route('dashboard')}}" class="dropdown-item">Dashboard</a>
                   </li>
                   <li><hr class="dropdown-divider"></li>
                   <li>

@@ -18,7 +18,7 @@
                     <h2 class="primary-header ">
                         Berhasil Checkout
                     </h2>
-                    <a href="#" class="btn btn-primary mt-2">
+                    <a href="{{route('dashboard')}}" class="btn btn-primary mt-2">
                         My Dashboard
                     </a>
                 </div>
