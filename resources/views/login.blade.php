@@ -34,19 +34,17 @@
             <div class="container-login100">
                 <div class="wrap-login100">
                     <form class="login100-form validate-form">
-                        <a href="{{route('home')}}">
+                        <a href="{{route('welcome')}}">
                             <span class="login100-form-title p-b-43">
                                 Login <span style="color: #255efc">C</span>ourse<span style="color: #255efc">C</span>ast
                             </span>
                         </a>
-                        
                         
                         <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
                             <input class="input100" type="text" name="email">
                             <span class="focus-input100"></span>
                             <span class="label-input100">Email</span>
                         </div>
-                        
                         
                         <div class="wrap-input100 validate-input" data-validate="Password is required">
                             <input class="input100" type="password" name="pass">
@@ -89,6 +87,10 @@
     
                             <a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
                                 <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="#" class="login100-form-social-item flex-c-m bg3 m-r-5">
+                                <i class="fa fa-google" aria-hidden="true"></i>
                             </a>
                         </div>
                     </form>
