@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!--===============================================================================================-->
+    <link rel="shortcut icon" type="image/icon" href="..." />
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{asset('asset-login/vendor/bootstrap/css/bootstrap.min.css')}}">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{asset('asset-login/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
@@ -85,13 +87,14 @@
                                 <i class="fa fa-facebook-f" aria-hidden="true"></i>
                             </a>
     
+                            <a href="{{route('user.login.google')}}" class="login100-form-social-item flex-c-m bg3 m-r-5">
+                                <i class="fa fa-google" aria-hidden="true"></i>
+                            </a>
+                            
                             <a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
                                 <i class="fa fa-twitter" aria-hidden="true"></i>
                             </a>
 
-                            <a href="#" class="login100-form-social-item flex-c-m bg3 m-r-5">
-                                <i class="fa fa-google" aria-hidden="true"></i>
-                            </a>
                         </div>
                     </form>
     

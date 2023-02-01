@@ -1,4 +1,4 @@
-<!--  -->
+
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
         <a class="navbar-brand" href="{{route('welcome')}}">
@@ -35,10 +35,45 @@
               <a class="nav-link" href="#">Business</a>
             </li>
           </ul>
-          <div class="d-flex">
-              <a href="{{route('login')}}" class="btn btn-master btn-secondary me-3"> Sign In </a>
-              <a href="{{route('login')}}" class="btn btn-master btn-primary"> Sign Up </a>
+          @auth
+          {{--  Login  --}}
+          <div class="d-flex user-logged nav-item dropdown no-arrow">
+            <a href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Halo, {{Auth::user()->name}}!
+                <img src={{Auth::user()->avatar}} class="user-photo rounded-circle" alt="">
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="right:0; left: auto" >
+                  <li>
+                    <a href="#" class="dropdown-item">Profile</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item">Dashboard</a>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <a href="#" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Sign out</a>
+                    <form action="{{route('logout')}}" method="post" id="logout-form" style="display: none">
+                      <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    </form>
+                  </li>
+                </ul>
+            </a>
           </div>
+
+          @else
+          {{--  Guest  --}}
+          <div class="d-flex">
+              <a href="{{route('login')}}" class="btn btn-master btn-secondary me-3">
+                Sign In 
+              </a>
+              <a href="{{route('login')}}" class="btn btn-master btn-primary">
+                Sign Up
+              </a>
+          </div>
+
+          @endauth
+
         </div>
       </div>
     </nav>
+
+ {{--  Login  --}}
