@@ -34,6 +34,7 @@ class UserController extends Controller
                 'email' => $data['email']
             ], $data);
             Auth::login($user, true);
+            
         return redirect(route('welcome'));
    }
 }

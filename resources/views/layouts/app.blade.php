@@ -9,6 +9,7 @@
     <title>@yield('title')</title>
     
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     
     <link rel="stylesheet" href="{{asset('frontend/style/main1.css')}}" />
     
