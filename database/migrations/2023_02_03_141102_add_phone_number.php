@@ -14,7 +14,7 @@ class AddPhoneNumber extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('phone', 1)->nullable()->after('occupation');
+            $table->string('phone', 15)->nullable()->after('occupation');
         });
     }
 
