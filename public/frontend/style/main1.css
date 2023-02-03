@@ -202,6 +202,7 @@ body {
 
 .btn-master,
 .btn-thirdty,
+.btn-danger,
 .btn-primary,
 .btn-secondary {
     padding: 11px 36px 11px 36px;
@@ -225,7 +226,7 @@ body {
 }
 
 .btn-primary:hover {
-    background: darken(#255efc);
+    background: rgb(23, 79, 233);
 }
 
 .story {
