@@ -14,10 +14,10 @@ class Checkout extends Model
     protected $fillable = [
         'user_id',
         'camp_id', 
-        'card_number',
-        'expired',
-        'cvc',
-        'is_paid'
+        'is_paid',
+        'discount_id',
+        'discount_percentage',
+        'total'
     ];
 
     public function setExpiredAttribute($value)
