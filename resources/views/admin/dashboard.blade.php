@@ -27,39 +27,32 @@
                             <th>Price</th>
                             <th>Register Date</th>
                             <th>Paid Status</th>
-                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody class="bg-light">
                         @forelse ($checkouts as $checkout)
                             <tr class="align-middle">
                                 <td>
-                                    {{$checkout->Camp->title}}
+                                    <strong>
+                                        {{$checkout->Camp->title}}
+                                    </strong>
                                 </td>
                                 <td>
                                     {{$checkout->User->name}}
                                 </td>
                                 <td>
-                                    <strong><span class="text-danger">$</span>{{$checkout->Camp->price}},00</strong>
+                                    <strong><span class="text-success">Rp. {{$checkout->Camp->price}}.000</span></strong>
                                 </td>
                                 <td>
                                     {{$checkout->created_at->format('d M Y')}}
                                 </td>
                                 <td class="text-center">
-                                    @if ($checkout->is_paid)
-                                        <div class="badge bg-success">Success</div>
+                                    @if ($checkout->payment_status == 'paid')
+                                        <div class="badge bg-success">{{$checkout->payment_status}}</div>
+                                    @elseif ($checkout->payment_status == 'waiting')
+                                        <div class="badge bg-warning">{{$checkout->payment_status}}</div>
                                     @else
-                                        <div class="badge bg-warning">Waiting</div>
-                                    @endif
-                                </td>
-                                <td>
-                                    @if (!$checkout->is_paid)
-                                        <form action="{{route('admin.checkout.update', $checkout->id)}}" method="post">
-                                            @csrf
-                                            <button class="btn btn-primary btn-sm">Set to Paid</button>
-                                        </form>
-                                    @else
-                                        
+                                        <div class="badge bg-danger">{{$checkout->payment_status}}</div>
                                     @endif
                                 </td>
                             </tr>

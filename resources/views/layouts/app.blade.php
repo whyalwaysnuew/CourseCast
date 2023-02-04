@@ -8,10 +8,10 @@
     
     <title>@yield('title')</title>
     
-    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="/frontend/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     
-    <link rel="stylesheet" href="{{asset('frontend/style/main1.css')}}" />
+    <link rel="stylesheet" href="/frontend/style/main1.css" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,6 +26,6 @@
 
     <!--  -->
     <!--  -->
-    <script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="/frontend/js/bootstrap.bundle.min.js" defer></script>
   </body>
 </html>
