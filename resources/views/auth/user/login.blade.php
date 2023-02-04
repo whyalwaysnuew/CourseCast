@@ -36,7 +36,7 @@
             <div class="container-login100">
                 <div class="wrap-login100">
                     <form class="login100-form validate-form">
-                        <a href="{{route('welcome">
+                        <a href="{{route('welcome')}}">
                             <span class="login100-form-title p-b-43">
                                 Login <span style="color: #255efc">C</span>ourse<span style="color: #255efc">C</span>ast
                             </span>
@@ -87,7 +87,7 @@
                                 <i class="fa fa-facebook-f" aria-hidden="true"></i>
                             </a>
     
-                            <a href="{{route('user.login.google" class="login100-form-social-item flex-c-m bg3 m-r-5">
+                            <a href="{{route('user.login.google')}}" class="login100-form-social-item flex-c-m bg3 m-r-5">
                                 <i class="fa fa-google" aria-hidden="true"></i>
                             </a>
                             
