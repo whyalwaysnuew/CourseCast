@@ -19,7 +19,7 @@
             </div>
             <div class="row my-5">
                 @include('components.alert')
-                <table class="table table-bordered">
+                <table class="table">
                     <thead class="bg-dark text-white">
                         <tr class="align-middle">
                             <th>Camp</th>
@@ -57,10 +57,12 @@
                                 </td>
                             </tr>
                         @empty
-                            <tr class="align-middle">
-                                <div class="alert alert-info" role="alert">
-                                    No Data!
-                                </div>
+                            <tr class="bg-light">
+                                <td colspan="7" class="text-center">
+                                    <h6 class="text-secondary">
+                                        No Data!
+                                    </h5>
+                                </td>
                             </tr>
                         @endforelse
                     </tbody>

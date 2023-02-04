@@ -47,11 +47,17 @@
                 @endif
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="right:0; left: auto" >
                   <li>
-                    <a href="#" class="dropdown-item">Profile</a>
-                  </li>
-                  <li>
                     <a href="{{route('dashboard')}}" class="dropdown-item">Dashboard</a>
                   </li>
+                  @if (Auth::user()->is_admin)
+                    <li>
+                      <a href="{{route('admin.discount.index')}}" class="dropdown-item">Discount</a>
+                    </li>
+                  @else
+                    <li>
+                      <a href="#" class="dropdown-item">Profile</a>
+                    </li>
+                  @endif
                   <li><hr class="dropdown-divider"></li>
                   <li>
                     <a href="#" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Sign out</a>
