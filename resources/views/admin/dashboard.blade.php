@@ -41,7 +41,14 @@
                                     {{$checkout->User->name}}
                                 </td>
                                 <td>
-                                    <strong><span class="text-success">Rp. {{$checkout->Camp->price}}.000</span></strong>
+                                    <strong>
+                                        Rp. {{$checkout->total}}
+                                        @if ($checkout->discount_id)
+                                            <span class="badge bg-success">
+                                                Discount {{$checkout->discount_percentage}}%
+                                            </span>
+                                        @endif
+                                    </strong>
                                 </td>
                                 <td>
                                     {{$checkout->created_at->format('d M Y')}}
